@@ -72,8 +72,8 @@ Plotting steps versus the 5-minute interval. Time series plot of the average num
 
 ```{r plot, fig.height = 5.5}
 plot(activity_interval$interval, activity_interval$steps,
-     xlab= 'Interval', ylab= 'Steps', type = "l",
-     main = "Activity Pattern", col = "dodgerblue")
+     xlab= "Interval", ylab= "Average Steps", 
+     main = "Activity Pattern", type = "l", col = "dodgerblue")
 ```
 
 Calculating the 5-minute interval that, on average, contains the maximum number of steps.
@@ -157,5 +157,6 @@ Creating a time series panel plot comparing the average number of steps taken pe
 ```{r plot2, fig.height = 7.5}
 library(lattice)
 xyplot(steps ~ interval | daytype, activity_fill_daytype, layout = c(1,2),
-       type = "l", main = "Activity Pattern")
+       xlab= "Interval", ylab= "Average Steps", main = "Activity Pattern",
+       type = "l")
 ```
